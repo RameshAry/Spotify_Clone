@@ -1,3 +1,4 @@
+import { signOut } from "next-auth/react";
 import{
     HomeIcon,
     SearchIcon,
@@ -8,10 +9,15 @@ import{
 
 } from "@heroicons/react/outline"
 import Home from "../pages"
-function Sidebar() {
+
+export default function Sidebar() {
   return (
     <div className="text-gray-600 p-5 text-sm border-r border-gray-900">
         <div className=" space-y-4">
+            <button className="flex items-center space-x-2 hover:text-white" onClick={() => signOut()}>
+                <HomeIcon className="h-5 w-5" />
+                <p>Log out</p>
+            </button>
             <button className="flex items-center space-x-2 hover:text-white">
                 <HomeIcon className="h-5 w-5" />
                 <p>Home</p>
@@ -51,5 +57,3 @@ function Sidebar() {
     </div>
   )
 }
-
-export default Sidebar
