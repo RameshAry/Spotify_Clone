@@ -8,11 +8,10 @@ import{
     RssIcon,
 
 } from "@heroicons/react/outline"
-// import Home from "../pages"
+import Home from "../pages"
 
 export default function Sidebar() {
-    const {data: session, status} = useSession();
-    console.log(session)
+    const { data: session, status } = useSession();
   return (
     <div className="text-gray-600 p-5 text-sm border-r border-gray-900">
         <div className=" space-y-4">
